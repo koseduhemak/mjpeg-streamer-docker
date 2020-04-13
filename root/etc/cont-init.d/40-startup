@@ -19,4 +19,4 @@ then
   FPS="30"
 fi
 
-/usr/local/bin/mjpg_streamer -i "${INPUT_LIB} -r ${RESOLUTION} -d /dev/video0 -f ${FPS}" -o "${OUTPUT_LIB} -p 8080 -w /usr/local/share/mjpg-streamer/www"
+/usr/local/bin/mjpg_streamer -i "${INPUT_LIB} -r ${RESOLUTION} -d /dev/video0 -f ${FPS}" -o "${OUTPUT_LIB} -p 8080 -l 0.0.0.0 -w /usr/local/share/mjpg-streamer/www"
