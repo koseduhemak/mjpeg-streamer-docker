@@ -25,4 +25,7 @@ WORKDIR /tmp/mjpg-streamer/mjpg-streamer-experimental/
 RUN make && \
     make install
 
+# Copy init scripts to container
+COPY ./root /
+
 ENTRYPOINT ["/init"]
