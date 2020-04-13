@@ -65,3 +65,6 @@ jobs:
           username: koseduhemak
           # Password for Docker registry
           password: ${{ secrets.DOCKER_HUB_SECRET }}
+          
+      - name: Docker Hub Description
+        uses: peter-evans/dockerhub-description@v2.1.1
