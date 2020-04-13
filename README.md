@@ -33,3 +33,5 @@ services:
 | FPS | `30` | Frames per second. | 
 | INPUT_LIB | input_uvc.so | Input library which should be used. |
 | INPUT_LIB | output_http.so | Output library which should be used. |
+
+Package: https://github.com/koseduhemak/mjpg-streamer-raspberrypi/packages/181872
