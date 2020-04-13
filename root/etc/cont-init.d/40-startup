@@ -6,7 +6,7 @@ fi
 
 if [ -z "${OUTPUT_LIB}" ];
 then
-  INPUT_LIB="output_http.so"
+  OUTPUT_LIB="output_http.so"
 fi
 
 if [ -z "${RESOLUTION}" ];
@@ -24,4 +24,9 @@ then
   PORT="8080"
 fi
 
-/usr/local/bin/mjpg_streamer -i "${INPUT_LIB} -r ${RESOLUTION} -d /dev/video0 -f ${FPS}" -o "${OUTPUT_LIB} -p ${PORT} -w /usr/local/share/mjpg-streamer/www"
+if [ -z "${DEVICE}" ];
+then
+  DEVICE="/dev/video0"
+fi
+
+/usr/local/bin/mjpg_streamer -i "${INPUT_LIB} -r ${RESOLUTION} -d ${DEVICE} -f ${FPS}" -o "${OUTPUT_LIB} -p ${PORT} -w /usr/local/share/mjpg-streamer/www"
