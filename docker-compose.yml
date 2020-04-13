@@ -1,0 +1,5 @@
+version: "3"
+services:
+  mjpg-streamer:
+    build: .
+    image: koseduhemak/mjpg-streamer
