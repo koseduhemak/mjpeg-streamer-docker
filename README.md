@@ -1,4 +1,4 @@
-# mjpeg-streamer-docker ![Docker](https://github.com/koseduhemak/mjpg-streamer-raspberrypi/workflows/Docker/badge.svg)
+# mjpeg-streamer-raspberrypi ![Docker](https://github.com/koseduhemak/mjpg-streamer-raspberrypi/workflows/Docker/badge.svg)
 
 This Docker Image lets you run mjpg-streamer on the Raspberry Pi 4 (but it should also work on older RPIs).
 
