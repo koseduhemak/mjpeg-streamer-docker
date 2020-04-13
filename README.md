@@ -4,21 +4,12 @@ This Docker Image lets you run mjpg-streamer on the Raspberry Pi 4 (but it shoul
 
 I tested it with a Logitech C270 and it works.
 
-### Run
+### Run via CLI:
 ```bash
 docker run -itd --rm --name mjpg-streamer --device /dev/video0:/dev/video0 -e "FPS=30" -e "RESOULTION=1280x720" -p 8080:8080 docker.pkg.github.com/koseduhemak/mjpg-streamer-raspberrypi/mjpg-streamer-raspberrypi:latest
 ```
 
-### Variables
-| Variables | Default value | Description |
-|---|---|---|
-| RESOLUTION | `1280x720` | Set the resolution of the camera. |
-| FPS | `30` | Frames per second. | 
-| INPUT_LIB | input_uvc.so | Input library which should be used. |
-| INPUT_LIB | output_http.so | Output library which should be used. |
-
-or via docker-compose:
-
+### Run via docker-compose:
 ```yml
 version: "3"
 services:
@@ -33,3 +24,12 @@ services:
     ports:
       - 8080:8080
 ```
+
+
+### Variables
+| Variables | Default value | Description |
+|---|---|---|
+| RESOLUTION | `1280x720` | Set the resolution of the camera. |
+| FPS | `30` | Frames per second. | 
+| INPUT_LIB | input_uvc.so | Input library which should be used. |
+| INPUT_LIB | output_http.so | Output library which should be used. |
